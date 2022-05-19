@@ -24,11 +24,12 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Security.Principal;
 using System.Web;
-using Microsoft.ReportingServices.Interfaces;
-using System.Globalization;
 using System.Xml;
+
+using Microsoft.ReportingServices.Interfaces;
 
 namespace Microsoft.Samples.ReportingServices.CustomSecurity
 {

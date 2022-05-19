@@ -29,7 +29,7 @@ CREATE TABLE [Users] (
   [salt] [varchar] (10) NOT NULL,
   CONSTRAINT [PK_Users] PRIMARY KEY  CLUSTERED
   (
-    [UserName]
+	[UserName]
   )  ON [PRIMARY] 
 ) ON [PRIMARY]
 GO
@@ -105,11 +105,11 @@ exec ('grant execute on RegisterUser to [' + @ASPUserName + ']');
 
 
 -- Virtual Service Account for PBI RS
-CREATE USER [NT SERVICE\PowerBIReportServer] FOR LOGIN [NT SERVICE\PowerBIReportServer] 
+CREATE USER [NT SERVICE\SQLServerReportingServices] FOR LOGIN [NT SERVICE\SQLServerReportingServices] 
 
 -- Grant execute permissions to the LookupUser and RegisterUser stored procs
-exec ('grant execute on LookupUser to [NT SERVICE\PowerBIReportServer]');
-exec ('grant execute on RegisterUser to [NT SERVICE\PowerBIReportServer]');
+exec ('grant execute on LookupUser to [NT SERVICE\SQLServerReportingServices]');
+exec ('grant execute on RegisterUser to [NT SERVICE\SQLServerReportingServices]');
 
 
 
